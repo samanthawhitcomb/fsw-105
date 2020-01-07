@@ -1,0 +1,3 @@
+[submodule "week2/week2/daily-planet-editor"]
+	path = week2/week2/daily-planet-editor
+	url = https://github.com/VSchool/daily-planet-editor.git
