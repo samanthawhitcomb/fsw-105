@@ -68,5 +68,8 @@
 // console.log(newArr)
 
 //3) capitalize each of an array of names
-// const capitalize = ["john", "JACOB", "jinGleHeimer", "schmidt"]
-
+var first = (["john", "JACOB", "jinGleHeimer", "schmidt"]);
+function capitalizeName(arrName){
+    return arrName.map(string => string.charAt(0).toUppercase() + string.slice(1).toLowercase());
+}
+console.log(capitalizeName(first));
