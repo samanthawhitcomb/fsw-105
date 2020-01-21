@@ -19,9 +19,9 @@
 // runForLoop(["cat", "dog"])
 
 
-//Re-write this .map() using an arrow function:
+// //Re-write this .map() using an arrow function:
 
-//Be aware that if JavaScript sees a { directly after the => it will think it's starting a function, and not starting an object, so the : will be an unexpected symbol.
+// //Be aware that if JavaScript sees a { directly after the => it will think it's starting a function, and not starting an object, so the : will be an unexpected symbol.
 
 // const arr = ["bright orange", "ripe", "rotten"]
 
@@ -29,7 +29,7 @@
 
 // console.log(result)
 
-// //-write this .filter() using an arrow function:
+// // //-write this .filter() using an arrow function:
 // const people = [
 //     {
 //         name: "Princess Peach",
@@ -52,13 +52,14 @@
 // const filterForFriendly = people.filter(person => person.friendly === true)
 // console.log(filterForFriendly)
 
-//Re-write the following functions to be arrow functions:
+// //Re-write the following functions to be arrow functions:
+// //first part
 // let doMath = [20, 5]
 
 // const result = doMath.reduce((a, b) => a + b)
 
 // console.log(result)
-
+// //second part
 // let doMath = [20, 5]
 
 // const result = doMath.reduce((a, b) => a * b)
@@ -69,17 +70,17 @@
 //firstName should default to "Jane"
 //lastName should default to "Doe"
 //age should default to 100
+// //Use template literals to build the string from #5
+
+// function printString(firstName = 'Jane', lastName = 'Doe', age = 100)
+// {
+//     return `Hi ${firstName} ${lastName}, how does it feel to be ${age}?`;
+// }
+//     console.log(printString(`Kat`, `Strark`, 40));
 
 
-//Use template literals to build the string from #5
-// var p = {
-//     name: `Jane`,
-//     lastName: `Doe`,
-//     age: 100,
-// };
-// console.log('Hi ' + p.name + ' ' + p.lastName + ', how does it feel to be ' + p.age + '?')
 
-//Use the shorthand syntax to make the following filter take up one line. Copy and paste the array to test it.
+// //Use the shorthand syntax to make the following filter take up one line. Copy and paste the array to test it.
 
 // const animals = [
 //     {
@@ -102,15 +103,15 @@
 // const filterForDogs = animals.filter(animal => animal.type === "dog")
 // console.log(filterForDogs)
 
-//Using template literals, write a function that takes location and name parameters and outputs a message formatted like this:
+// //Using template literals, write a function that takes location and name parameters and outputs a message formatted like this:
 
-var loc = {
-    name: `Janice`,
-    location: `Hawaii`,
-    age: 100,
-};
-console.log(`Hi `  + loc.name +`!\n`,
+// // var loc = {
+// //     name: `Janice`,
+// //     location: `Hawaii`,
+// //     age: 100,
+// // };
+// // console.log(`Hi `  + loc.name +`!\n`,
 
-`Welcome to ` +loc.location+`.\n`,
+// // `Welcome to ` +loc.location+`.\n`,
 
-`I hope you enjoy your stay. Please ask the president of ` +loc.location+ ` if you need anything.`)
+// // `I hope you enjoy your stay. Please ask the president of ` +loc.location+ ` if you need anything.`)

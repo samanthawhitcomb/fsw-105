@@ -62,8 +62,11 @@
 // const result = arr.map(num => num * 2)
 // console.log(result)
 //2) Take an array of numbers and make them strings
-const arr = [2, 5, 100]
+// const arr = [2, 5, 100]
 
-const result = arr.map(function(string){
-    return 
-})
+// const newArr = arr.map(String)
+// console.log(newArr)
+
+//3) capitalize each of an array of names
+// const capitalize = ["john", "JACOB", "jinGleHeimer", "schmidt"]
+
