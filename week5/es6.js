@@ -49,8 +49,8 @@ const people = [
     }
 ]
 
-// const filterForFriendly = people.filter(person => person.friendly === true)
-// console.log(filterForFriendly)
+const filterForFriendly = people.filter(person => person.friendly === true)
+console.log(filterForFriendly)
 
 // //Re-write the following functions to be arrow functions:
 // //first part
@@ -77,7 +77,6 @@ function printString(firstName = 'Jane', lastName = 'Doe', age = 100)
     return `Hi ${firstName} ${lastName}, how does it feel to be ${age}?`;
 }
     console.log(printString(`Kat`, `Strark`, 40));
-
 
 
 // //Use the shorthand syntax to make the following filter take up one line. Copy and paste the array to test it.
