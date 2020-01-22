@@ -61,13 +61,13 @@ const arr = [2, 5, 100]
 
 const result = arr.map(num => num * 2)
 console.log(result)
-// 2) Take an array of numbers and make them strings
+//2) Take an array of numbers and make them strings
 const arr = [2, 5, 100]
 
 const newArr = arr.map(String)
 console.log(newArr)
 
-//3) capitalize each of an array of names
+// //3) capitalize each of an array of names
 var first = (["john", "JACOB", "jinGleHeimer", "schmidt"]);
 function capitalizeName(arrName){
     return arrName.map(string => string.charAt(0).toUppercase() + string.slice(1).toLowercase());
@@ -97,14 +97,108 @@ const ofAge = [
     {name: "Kayne West", age: 16},
     {name: "Bob Ziroll", age: 100}
 ]
-const oldEnough = ofAge.filter(older => {
+oldEnough = ofAge.map(older => {
     if(older.age >= 18)
     {
-        return (+ofAge.name+' can go to the Matrix.');
+        return (`${older.name} can go to the Matrix.`);
     }
     else (older.age < 18)
     {
-        return (+ofAge.name+' is under age!!');
+        return (`${older.name} is under age!!`);
     }
 })
 console.log(oldEnough)
+
+readyToPutInTheDOM = ofAge.map(older => {
+    return `<h1>${older.name}</h1><h2>${older.age}</h2>`
+    })
+    console.log(readyToPutInTheDOM)
+
+//Use the built-in .reduce() method on arrays to solve all of these problems:
+//1) Turn an array of numbers into a total of all the numbers
+
+    const r =  [1, 2, 3]
+    total = r.reduce((final, num) => {
+        final += num
+        return final
+    },0);
+        console.log(total);
+//2) Turn an array of numbers into a long string of all those numbers.
+    
+    const r =  [1, 2, 3]
+    total = r.reduce((final, num) => {
+        final += num.toString()
+        return final
+    },[]);
+        console.log(total);
+
+
+//3) Turn an array of voter objects into a count of how many people voted
+    const r = [
+        { name: "Bob", age: 30, voted: true },
+        { name: "Jake", age: 32, voted: true },
+        { name: "Kate", age: 25, voted: false },
+        { name: "Sam", age: 20, voted: false },
+        { name: "Phil", age: 21, voted: true },
+        { name: "Ed", age: 55, voted: true },
+        { name: "Tami", age: 54, voted: true },
+        { name: "Mary", age: 31, voted: false },
+        { name: "Becky", age: 43, voted: false },
+        { name: "Joey", age: 41, voted: true },
+        { name: "Jeff", age: 30, voted: true },
+        { name: "Zach", age: 19, voted: false }
+    ]
+    
+    total = r.reduce((final, num) => {
+        if(num.voted){final ++}
+        return final
+    },0);
+        console.log(total);
+//4) Given an array of all your wishlist items, figure out how much it would cost to just buy everything at once
+    const r  = [
+        { tittle: "Tesla Model S", price: 90000 },
+        { tittle: "4 carat diamond ring", price: 45000 },
+        { tittle: "Fancy hacky Sack", price: 5 },
+        { tittle: "Gold fidgit spinner", price: 2000 },
+        { tittle: "A Second Tesla Model S", price: 90000 },
+    ]
+    total = r.reduce((final, num) => {
+        (final += num.price )
+        return final
+    },0);
+        console.log(total);
+
+//5) Given an array of arrays, flatten them into a single array
+
+    const arr = [
+        ["1", "2", "3"],
+        [true],
+        [4, 5, 6]
+    ];
+        total = arr.reduce((final, num) => {
+        final = final.concat(num)
+        return final
+    },[]);
+        console.log(total);
+//6) Given an array of potential voters, return an object representing the results of the vote
+// Include how many of the potential voters were in the ages 18-25, how many from 26-35, how many from 36-55, and how many of each of those age ranges actually voted. The resulting object containing this data should have 6 properties. See the example output at the bottom.
+
+    const r = [
+        { name: "Bob", age: 30, voted: true },
+        { name: "Jake", age: 32, voted: true },
+        { name: "Kate", age: 25, voted: false },
+        { name: "Sam", age: 20, voted: false },
+        { name: "Phil", age: 21, voted: true },
+        { name: "Ed", age: 55, voted: true },
+        { name: "Tami", age: 54, voted: true },
+        { name: "Mary", age: 31, voted: false },
+        { name: "Becky", age: 43, voted: false },
+        { name: "Joey", age: 41, voted: true },
+        { name: "Jeff", age: 30, voted: true },
+        { name: "Zach", age: 19, voted: false }
+    ]
+        total = r.reduce((final, voters) => {
+        (final += voters.voted)
+        return `youngVotes: `
+    },0);
+        console.log(total);
